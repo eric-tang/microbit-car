@@ -1,11 +1,12 @@
 {
     "name": "makebit",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Extension for clb Robots micro:bit",
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "neopixel": "github:microsoft/pxt-neopixel#v0.7.3"
+        "neopixel": "github:microsoft/pxt-neopixel#v0.7.3",
+        "TM1650": "github:zhuning239/TM1650"
     },
     "files": [
         "README.md",
