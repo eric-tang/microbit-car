@@ -83,7 +83,7 @@ problem either.
 What changed and why:
 
 - **Removed `cbit_IR`** — the V1-only C++ that broke the V2 build. *This is the fix.*
-- **Removed, then restored `TM1650`** — it provides the 创乐博四位数码管 (4‑digit
+- **Removed, then restored `TM1650`** — it provides the clb (4‑digit
   display) blocks. It is pure TypeScript, so it does not reintroduce the failure.
 - **`"3.0"` → `"3.0.1"`** — `"3.0"` is not valid semver. The bump also forces
   MakeCode to re-fetch instead of serving a cached (broken) copy.
