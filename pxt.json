@@ -6,7 +6,8 @@
     "dependencies": {
         "core": "*",
         "neopixel": "github:microsoft/pxt-neopixel#v0.7.3",
-        "TM1650": "github:zhuning239/TM1650"
+        "TM1650": "github:zhuning239/TM1650",
+        "microphone": "*"
     },
     "files": [
         "README.md",
@@ -15,8 +16,8 @@
     "testFiles": [
         "test.ts"
     ],
+    "public": true,
     "supportedTargets": [
         "microbit"
-    ],
-    "public": true
+    ]
 }

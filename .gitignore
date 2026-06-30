@@ -1,0 +1,13 @@
+# PXT / MakeCode local build artifacts
+built/
+node_modules/
+pxt_modules/
+yotta_modules/
+yotta_shared/
+.pxt/
+pxtcli.json
+*.db
+
+# Local pxt-cli tooling install (target lives in node_modules, not the extension)
+package.json
+package-lock.json
