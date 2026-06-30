@@ -1,17 +1,17 @@
 {
     "name": "makebit",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "Extension for clb Robots micro:bit",
     "license": "MIT",
     "dependencies": {
         "core": "*",
         "neopixel": "github:microsoft/pxt-neopixel#v0.7.3",
-        "TM1650": "github:zhuning239/TM1650",
         "microphone": "*"
     },
     "files": [
         "README.md",
-        "main.ts"
+        "main.ts",
+        "tm1650.ts"
     ],
     "testFiles": [
         "test.ts"

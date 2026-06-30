@@ -9,6 +9,7 @@ It drives the on-board PCA9685 controller and gives you blocks for:
 - **RGB pixels** – the 4 on-board NeoPixels (pin `P16`)
 - **Sensors** – infrared obstacle, flame, and ultrasonic distance
 - **Sound-sensor level** – set a servo channel high/low
+- **4-digit display** – show numbers / hex / dot point on the TM1650 (clb 4-digit display)
 
 Builds a universal hex, so it runs on micro:bit **V1 and V2**.
 
@@ -71,6 +72,15 @@ strip.set_brightness(40)
 strip.show_color(neopixel.colors(NeoPixelColors.Blue))
 ```
 
+### 4-digit display (TM1650)
+
+```python
+TM1650.on()                 # power on the display
+TM1650.set_intensity(5)     # brightness 1..8
+TM1650.show_number(1234)    # show a number
+TM1650.clear()              # blank it
+```
+
 ### Put it together — drive until something is in the way
 
 ```python
@@ -101,6 +111,9 @@ basic.forever(on_forever)
 | `flame sensor` | `makerobo.flame(DigitalPin.P8, enflame.Flame)` |
 | `ultrasonic module` | `makerobo.ping(DigitalPin.P1, PingUnit.Centimeters)` |
 | `RGB` | `makerobo.rgb()` |
+| `turn on display` | `TM1650.on()` |
+| `show number %num` | `TM1650.show_number(1234)` |
+| `set intensity %dat` | `TM1650.set_intensity(5)` |
 
 *(`makerobo` is the block category, shown as **makerobo** in the editor toolbox.)*
 

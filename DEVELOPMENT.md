@@ -85,6 +85,7 @@ What changed and why:
 - **Removed `cbit_IR`** — the V1-only C++ that broke the V2 build. *This is the fix.*
 - **Removed, then restored `TM1650`** — it provides the clb (4‑digit
   display) blocks. It is pure TypeScript, so it does not reintroduce the failure.
+  (Later vendored into `tm1650.ts` and translated, removing the external dependency.)
 - **`"3.0"` → `"3.0.1"`** — `"3.0"` is not valid semver. The bump also forces
   MakeCode to re-fetch instead of serving a cached (broken) copy.
 - **Added `"supportedTargets": ["microbit"]`** — marks the extension compatible.
@@ -114,7 +115,7 @@ npm install -g pxt              # installs the `pxt` CLI (here: ~/.npm-global/bi
 
 cd microbit-car
 pxt target microbit            # downloads the micro:bit target into ./node_modules (~minutes)
-pxt install                    # fetches GitHub deps (neopixel, TM1650) into ./pxt_modules
+pxt install                    # fetches GitHub deps (neopixel) into ./pxt_modules
 ```
 
 Installed here: target `pxt-microbit v8.1.28`, `pxt-core v12.3.24`.
@@ -245,6 +246,7 @@ Two equally valid workflows:
 |---|---|
 | `pxt.json` | Extension manifest: name, version, dependencies, target. **The fix lives here.** |
 | `main.ts` | The extension itself (`makerobo` namespace): motors, servos, RGB, IR, flame, ultrasonic. |
+| `tm1650.ts` | 4-digit display driver (`TM1650` namespace). Vendored from zhuning239/TM1650 (MIT), translated to English. |
 | `test.ts` | Local demo / bring-up harness. Compiled as a project, ignored as a dependency. |
 | `README.md` | Shown to extension users in the editor. |
 | `Makefile` | Thin wrappers: `make build` / `make deploy` / `make test`. |
